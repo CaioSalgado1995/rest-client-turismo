@@ -1,0 +1,45 @@
+<%= form_for Passagem.new, :url => {:action => "create"} do |form| %>
+	<div class="row">
+		<div class="col-sm-8">
+			<% if @funcao == "consultar"%>
+				<div class="alert alert-success" role="alert">
+					<h4 class="alert-heading">Digite os dados para consultar sua passagem!</h3>
+				</div>
+			<% end %>
+			<% if @funcao == "comprar"%>
+				<div class="alert alert-success" role="alert">
+					<h4 class="alert-heading">Digite os dados para comprar sua passagem!</h3>
+				</div>
+			<% end %>
+			<div class="form-group">
+				<%= form.label :dataIda, "Data de ida:" %>
+				<%= form.text_field :dataIda, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :dataVolta, "Data de Volta:" %>
+				<%= form.text_field :dataVolta, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :origem, "Origem:" %>
+				<%= form.text_field :origem, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :destino, "Destino:" %>
+				<%= form.text_field :destino, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :numeroPessoas, "Número de pessoas:" %>
+				<%= form.text_field :numeroPessoas, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :tipo, "Tipo (ida = 1, ida e volta = 2):" %>
+				<%= form.text_field :tipo, class:"form-control" %>
+			</div>
+			<% if @funcao == "consultar" %>
+				<%= form.submit "Consultar Passagem", class:"btn btn-primary" %>
+			<% else %>
+				<%= form.submit "Comprar Passagem", class:"btn btn-primary" %>
+			<% end %>
+		</div>
+	<div>
+<% end %>

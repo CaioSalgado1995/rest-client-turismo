@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Agturismo</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+ 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  </head>
+
+  <body>
+  	<%= nav_bar brand: "Turismo", brand_link: produtos_path do %>
+  		<%= menu_group do %>
+        <%= drop_down "Passagem" do %>
+  			  <%= menu_item "Consultar passagem", passagens_path + "?funcao=consultar" %>
+  			  <%= menu_item "Comprar passagem", passagens_path + "?funcao=comprar" %>
+        <% end %>
+        <%= drop_down "Hospedagem" do %>
+          <%= menu_item "Consultar hospedagem", hospedagens_path + "?funcao=consultar" %>
+  			  <%= menu_item "Comprar hospedagem", hospedagens_path + "?funcao=comprar" %>
+        <% end %>
+        <%= drop_down "Pacote" do %>
+          <%= menu_item "Consultar pacote", pacotes_path + "?funcao=consultar" %>
+          <%= menu_item "Comprar pacote", pacotes_path + "?funcao=comprar" %>
+  		  <% end %>
+      <% end %>
+	<% end %>
+  	<div class="container">
+    	<%= yield %>
+	</div>
+  </body>
+</html>

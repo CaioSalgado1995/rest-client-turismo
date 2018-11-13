@@ -1,0 +1,2 @@
+module HospedagensHelper
+end

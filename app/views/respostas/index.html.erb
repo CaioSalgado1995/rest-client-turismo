@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="col-sm-8">
+		<% if @resposta.include? "Erro" %>
+			<div class="alert alert-danger" role="alert">
+				<h4 class="alert-heading"><%= @resposta %></h3>
+			</div>
+		<% else %>
+			<div class="alert alert-success" role="alert">
+				<h4 class="alert-heading"><%= @resposta %></h3>
+			</div>
+		<% end %>
+	</div>
+<div>

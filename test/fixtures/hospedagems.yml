@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  origem: MyString
+  destino: MyString
+  dataEntrada: MyString
+  dataSaida: MyString
+  numeroQuartos: 1
+  numeroPessoas: 1
+  preco: 1
+
+two:
+  origem: MyString
+  destino: MyString
+  dataEntrada: MyString
+  dataSaida: MyString
+  numeroQuartos: 1
+  numeroPessoas: 1
+  preco: 1

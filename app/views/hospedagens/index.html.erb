@@ -1,0 +1,46 @@
+<%= form_for Hospedagem.new, :url => {:action => "create"} do |form| %>
+
+	<div class="row">
+		<div class="col-sm-8">
+			<% if @funcao == "consultar" %>
+				<div class="alert alert-success" role="alert">
+					<h4 class="alert-heading">Digite os dados para consultar sua hospedagem!</h3>
+				</div>
+			<% end %>
+			<% if @funcao == "comprar" %>
+				<div class="alert alert-success" role="alert">
+					<h4 class="alert-heading">Digite os dados para comprar sua hospedagem!</h3>
+				</div>
+			<% end %>
+			<div class="form-group">
+				<%= form.label :dataEntrada, "Data de entrada:" %>
+				<%= form.text_field :dataEntrada, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :dataSaida, "Data de saída:" %>
+				<%= form.text_field :dataSaida, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :origem, "Origem:" %>
+				<%= form.text_field :origem, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :destino, "Destino:" %>
+				<%= form.text_field :destino, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :numeroPessoas, "Número de Pessoas:" %>
+				<%= form.text_field :numeroPessoas, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :numeroQuartos, "Número de Quartos:" %>
+				<%= form.text_field :numeroQuartos, class:"form-control" %>
+			</div>
+			<% if @funcao == "consultar" %>
+				<%= form.submit "Consultar Hospedagem", class:"btn btn-primary" %>
+			<% else %>
+				<%= form.submit "Comprar Hospedagem", class:"btn btn-primary" %>
+			<% end %>
+		</div>
+	<div>
+<% end %>

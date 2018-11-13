@@ -1,0 +1,2 @@
+class Pacote < ApplicationRecord
+end

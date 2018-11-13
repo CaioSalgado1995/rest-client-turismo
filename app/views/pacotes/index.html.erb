@@ -1,0 +1,49 @@
+<%= form_for Pacote.new do |form| %>
+	<div class="row">
+		<div class="col-sm-8">
+			<% if @funcao == "consultar"%>
+				<div class="alert alert-success" role="alert">
+					<h4 class="alert-heading">Digite os dados para consultar seu pacote!</h3>
+				</div>
+			<% end %>
+			<% if @funcao == "comprar"%>
+				<div class="alert alert-success" role="alert">
+					<h4 class="alert-heading">Digite os dados para comprar seu pacote!</h3>
+				</div>
+			<% end %>
+			<div class="form-group">
+				<%= form.label :dataIda, "Data de ida:" %>
+				<%= form.text_field :dataIda, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :dataVolta, "Data de volta:" %>
+				<%= form.text_field :dataVolta, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :origem, "Origem:" %>
+				<%= form.text_field :origem, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :destino, "Destino:" %>
+				<%= form.text_field :destino, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :numeroPessoas, "Número de pessoas:" %>
+				<%= form.text_field :numeroPessoas, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :tipoPassagem, "Tipo de passagem (1 ida 2 ida e volta):" %>
+				<%= form.text_field :tipoPassagem, class:"form-control" %>
+			</div>
+			<div class="form-group">
+				<%= form.label :numeroQuartos, "Número de quartos:" %>
+				<%= form.text_field :numeroQuartos, class:"form-control" %>
+			</div>
+			<% if @funcao == "consultar" %>
+				<%= form.submit "Consultar Pacote", class:"btn btn-primary" %>
+			<% else %>
+				<%= form.submit "Comprar Pacote", class:"btn btn-primary" %>
+			<% end %>
+		</div>
+	<div>
+<% end %>

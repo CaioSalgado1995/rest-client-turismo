@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dataIda: MyString
+  dataVolta: MyString
+  origem: MyString
+  destino: MyString
+  numeroPessoas: MyString
+  tipo: MyString
+
+two:
+  dataIda: MyString
+  dataVolta: MyString
+  origem: MyString
+  destino: MyString
+  numeroPessoas: MyString
+  tipo: MyString

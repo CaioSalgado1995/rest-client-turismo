@@ -1,0 +1,5 @@
+I, [2018-11-13T19:00:52.975949 #18064]  INFO -- PacotesController index funcao = : consultar
+I, [2018-11-13T19:01:05.501768 #18064]  INFO -- PacotesController recuperando objeto: {"dataIda"=>"21/08/2018", "dataVolta"=>"22/08/2018", "origem"=>"Curitiba", "destino"=>"Rio de Janeiro", "numeroPessoas"=>"2", "tipoPassagem"=>"2", "numeroQuartos"=>"1"}
+I, [2018-11-13T19:01:05.501768 #18064]  INFO -- PacotesController funcao = : consultar
+I, [2018-11-13T19:01:05.502769 #18064]  INFO -- PacotesController JSON = : {"passagem":{"dataIda":"21/08/2018","dataVolta":"22/08/2018","origem":"Curitiba","destino":"Rio de Janeiro","numeroPessoas":"2","tipo":"2"},"hospedagem":{"dataEntrada":"21/08/2018","dataSaida":"22/08/2018","origem":"Curitiba","destino":"Rio de Janeiro","numeroPessoas":"2","numeroQuartos":"1"}}
+I, [2018-11-13T19:01:05.538771 #18064]  INFO -- Resposta a chamada a API: Pacote inexistente
